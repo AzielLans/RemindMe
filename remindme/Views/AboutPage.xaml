@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:remindme.Models"             
+             x:Class="remindme.AboutPage">
+    <ContentPage.BindingContext>
+        <models:varables/>
+    </ContentPage.BindingContext>
+    <VerticalStackLayout Spacing="10" Margin="10">
+        <HorizontalStackLayout Spacing="10">
+            <Label FontSize="32" FontAttributes="Bold" Text="{Binding Title}"/>
+            <Label FontSize="Large" Text="{Binding Version}" VerticalOptions="End"/>
+        </HorizontalStackLayout>
+        <Switch Toggled="Switch_Toggled"/>
+    </VerticalStackLayout>
+</ContentPage>
